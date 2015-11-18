@@ -54,27 +54,25 @@ Use these steps to create and publish a release.
    3. Select the right repository and press on the `Close` button. Once the repository is closed (it might take a while), the `Summary` tab for the repository should contain an URL for the Maven repository that contains the published release artifacts. Use that URL to test the release artifacts.
 
 4. Create a tag for the release:
-```bash
-$ git tag liberty-gradle-plugin-${version}
-$ git push origin liberty-gradle-plugin-${version}
-```
+  ```bash
+  $ git tag liberty-gradle-plugin-${version}
+  $ git push origin liberty-gradle-plugin-${version}
+  ```
 
 5. Prepare the `master` branch for the next development iteration by updating the `build.gradle` with:
  * Set the `version` property to the next version with `-SNAPSHOT` suffix. For example: `1.3-SNAPSHOT`. 
  * Set the `tag` property to `HEAD`.
 
 6. Commit and push the changes to the `master` branch:
-```bash
-$ git commit -m "prepare for next development iteration"
-$ git push origin master
-```
+  ```bash
+  $ git commit -m "prepare for next development iteration"
+  $ git push origin master
+  ```
 
 7. Next, publish the new snaphost artifacts:
-```bash
-$ gradle uploadArchives
-```
-
-
+  ```bash
+  $ gradle uploadArchives
+  ```
 
 ### Promoting to Maven Central
 
