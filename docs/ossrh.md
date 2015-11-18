@@ -38,15 +38,15 @@ Use these steps to create and publish a release.
    * Make sure that the version of dependencies match between the main `build.gradle` file and `src/integTest/resources/build.gradle` file.
 
 2. Commit and push the changes to the `master` branch:
-```bash
-$ git commit -m "prepare release liberty-gradle-plugin-${version}"
-$ git push origin master
-```
+  ```bash
+  $ git commit -m "prepare release liberty-gradle-plugin-${version}"
+  $ git push origin master
+  ```
 
 3. Next, upload the release artifacts to the staging site:
-```bash
-$ gradle uploadArchives
-```
+  ```bash
+  $ gradle uploadArchives
+  ```
 
   Once this step is successful, the artifacts are uploaded to OSSRH. Next, do the following steps:
    1. Login into the [Sonatype Nexux Professional web interface][ossrh-web]
